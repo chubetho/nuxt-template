@@ -2,6 +2,6 @@
 
 <template>
   <div>
-    index
+    <UButton>Hello</UButton>
   </div>
 </template>
