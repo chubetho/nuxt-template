@@ -1,0 +1,39 @@
+{
+  "name": "nuxt",
+  "type": "module",
+  "private": true,
+  "packageManager": "pnpm@10.6.3",
+  "engines": {
+    "pnpm": ">=10"
+  },
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare && npx simple-git-hooks",
+    "lint": "npx eslint ."
+  },
+  "dependencies": {
+    "@nuxt/eslint": "1.2.0",
+    "@nuxt/fonts": "0.11.0",
+    "@nuxt/ui": "3.0.0",
+    "eslint": "^9.22.0",
+    "nuxt": "^3.16.0",
+    "typescript": "^5.8.2",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^4.10.1",
+    "eslint-plugin-format": "^1.0.1",
+    "nano-staged": "^0.8.0",
+    "simple-git-hooks": "^2.11.1"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx nano-staged"
+  },
+  "nano-staged": {
+    "*": "npx eslint . --fix"
+  }
+}
