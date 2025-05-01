@@ -3,13 +3,16 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/eslint',
     '@nuxt/ui',
+    '@vueuse/nuxt',
   ],
-  devtools: { enabled: false },
+  devtools: {
+    enabled: false,
+  },
   css: ['~/assets/css/main.css'],
   future: {
     compatibilityVersion: 4,
   },
-  compatibilityDate: '2024-11-01',
+  compatibilityDate: '2025-05-01',
   eslint: {
     config: {
       standalone: false,
